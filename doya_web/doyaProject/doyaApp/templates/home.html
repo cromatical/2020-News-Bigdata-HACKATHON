@@ -4,14 +4,14 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
+{% load static %}
 <html>
 	<head>
 		<title>Future Imperfect by HTML5 UP</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-		<link rel="stylesheet" href="assets/css/main.css" />
-
+		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
 	</head>
 	<body class="is-preload">
 
@@ -20,14 +20,12 @@
 
 				<!-- Header -->
 					<header id="header">
-						<h1><a href="index.html">취업빽</a></h1>
+						<h1><a href="{% url 'home' %}">취업빽</a></h1>
 						<nav class="links">
 							<ul>
-								<li><a href="#">HOME</a></li>
+								<li><a href="{% url 'home' %}">HOME</a></li>
 								<li><a href="#">COMMUNITY</a></li>
 								<li><a href="#">MYPAGE</a></li>
-								<!-- <li><a href="#">Tempus</a></li> -->
-								<!-- <li><a href="#">Adipiscing</a></li> -->
 							</ul>
 						</nav>
 						<nav class="main">
@@ -71,8 +69,8 @@
 								<ul class="links">
 									<li>
 										<a href="#">
-											<h3>Lorem ipsum</h3>
-											<p>Feugiat tempus veroeros dolor</p>
+											<h3>[스크랩북]AI</h3>
+											<p>2020-10-18부터 수집한 AI 기사들</p>
 										</a>
 									</li>
 									<li>
@@ -197,7 +195,7 @@
 
 									<div class="col mb-1" style="padding: 0px 8px;">
 										<div class="card">
-											<div class="card-header" style="background: rgba(200, 191, 231, 1)">추천 뉴스스</div>
+											<div class="card-header" style="background: rgba(200, 191, 231, 1)">추천 뉴스</div>
 											<div class='media'>
 												<a href='#'>
 													<img src="https://t1.daumcdn.net/cfile/tistory/225292375410F5F90C" class="card-img-top" alt="..." />
@@ -510,7 +508,7 @@
 
 									<div class="col mb-1" style="padding: 0px 8px;">
 										<div class="card">
-											<div class="card-header" style="background: rgba(44, 87, 218, 0.5)">추천 뉴스스</div>
+											<div class="card-header" style="background: rgba(44, 87, 218, 0.5)">추천 뉴스</div>
 											<div class='media'>
 												<a href='#'>
 													<img src="https://cdn01.bespinglobal.com/wp-content/uploads/2018/07/step-by-step-ai-bigdata-series-1-fb.jpg" class="card-img-top" alt="..." />
@@ -807,11 +805,11 @@
 			</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+			<script src="{% static 'assets/js/browser.min.js' %}"></script>
+			<script src="{% static 'assets/js/breakpoints.min.js' %}"></script>
+			<script src="{% static 'assets/js/util.js' %}"></script>
+			<script src="{% static 'assets/js/main.js' %}"></script>
 			<script type='text/javascript'>
 				// Get the modal
 				var modal = document.getElementById('myModal');
