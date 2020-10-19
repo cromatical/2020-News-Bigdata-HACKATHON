@@ -1,0 +1,842 @@
+<!DOCTYPE HTML>
+<!--
+	Future Imperfect by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+{% load static %}
+<html>
+	<head>
+		<title>Future Imperfect by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="{% url 'home' %}">취업빽</a></h1>
+						<nav class="links">
+							<ul>
+								<li><a href="{% url 'home' %}">HOME</a></li>
+								<li><a href="#">COMMUNITY</a></li>
+								<li><a href="#">MYPAGE</a></li>
+							</ul>
+						</nav>
+						<nav class="main">
+							<ul>
+								<li class="search">
+									<a class="fa-search" href="#search">Search</a>
+									<form id="search" method="get" action="#">
+										<input type="text" name="query" placeholder="Search" />
+									</form>
+								</li>
+								<li class="menu">
+									<a class="fa-bars" href="#menu">Menu</a>
+								</li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<section id="menu">
+
+						<!-- Search -->
+							<!-- <section>
+								<form class="search" method="get" action="#">
+									<input type="text" name="query" placeholder="Search" />
+								</form>
+							</section> -->
+
+
+						<!-- Actions -->
+						<section>
+							<ul class="actions stacked">
+								<li><a href="#" class="button large fit">Log In</a></li>
+							</ul>
+						</section>
+
+
+						<!-- Links -->
+							<section>
+
+								
+								<ul class="links">
+									<li>
+										<a href="#">
+											<h3>[스크랩북]AI</h3>
+											<p>2020-10-18부터 수집한 AI 기사들</p>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<h3>Dolor sit amet</h3>
+											<p>Sed vitae justo condimentum</p>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<h3>Feugiat veroeros</h3>
+											<p>Phasellus sed ultricies mi congue</p>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<h3>Etiam sed consequat</h3>
+											<p>Porta lectus amet ultricies</p>
+										</a>
+									</li>
+								</ul>
+							</section>
+
+
+					</section>
+
+
+					<!-- Main -->
+					<div class='content_container'>
+						<div class='news_major1'>
+							<header class="major">
+								<h2>연극영화과 뉴스</h2>
+							</header>
+							<div id="main">
+								<div class="row row-cols-1 row-cols-md-3">
+									<div class="col mb-1" style="padding: 0px 8px;">
+										<div class="card">
+											<div class="card-header" style="background: rgba(200, 191, 231, 1)">추천 뉴스</div>
+											<div class='media'>
+												<a data-target="#myModal" data-toggle="modal" class="Mainimg" href="#myModal">
+													<img src="https://img1.daumcdn.net/thumb/R1280x0.fpng/?fname=http://t1.daumcdn.net/brunch/service/user/1c3g/image/tqjzYh0FCicvSKU9fH2ayt9sh5c.png" class="card-img-top" alt="..." />
+												</a>
+												<div id="myModal" class="modal">
+													<!-- Modal content -->
+													<div class="modal-content">
+														<span class="close">&times;</span>                                                               
+														<h3>📢심각성 지표식</h3>
+														<p class='explain_function'>
+															y = ~~ <br>
+															~,~,~,~<~,~, 여섯가지 요인으로 경험적으로 심각성지표식을 계산함
+														</p>
+														<h3>📢체감 심각성 지표식</h3>
+														<p class='explain_function'>
+															y = ~~ <br>
+															~,~,~,~<~,~, 세가지 요인으로 경험적으로 심각성지표식을 계산함
+														</p>
+													</div>
+												</div>
+											</div>
+											<div class="card-body">
+												<article class='cd-card-id0'>
+													<div class='cd_wrapper'>
+														
+														<div class="cd_content">
+															<h3 class="card-title">
+																<a href='https://news.joins.com/article/23894066'>
+																	<span class='cd_headline_icon'>
+																		<span class='cd_headline_text'>
+																			헤드라인 어쩌구저쩌구 큰일이 났어요
+																		</span>
+																	</span>
+																</a>
+															</h3>
+															<p class="card-text">
+																<a href='https://news.joins.com/article/23894066'>
+																	<span class='cd_content_icon'>
+																		<span class='cd_content_text'>
+																			본문 내용 일부를 여기에 가져오면 되겠지 헤드라인만 쓰고싶으면 여기는 없애도 됨
+																		</span>
+																	</span>
+																</a>
+															</p>
+														</div>
+													<!-- </div> -->
+												</article>
+											</div>
+											<ul class="list-group list-group-flush">
+												<li class="list-group-item">
+													<article class='cd-card-id1'>
+														<a class='rmd_article' href='#'>
+															<p class='cd_headline_icon' style="margin-bottom: 0px;">
+																추천기사 헤드라인 1번
+															</p> 
+														</a>
+													</article>
+												</li>
+												<li class="list-group-item">
+													<article class='cd-card-id2'>
+														<a class='rmd_article' href='#'>
+															<p class='cd_headline_icon' style="margin-bottom: 0px;">		
+																추천기사 헤드라인 2번
+															</p>	
+														</a>
+													</article>
+												</li>
+												<li class="list-group-item">
+													<article class='cd-card-id2'>
+														<a class='rmd_article' href='#'>
+															<p class='cd_headline_icon' style="margin-bottom: 0px;">
+																추천기사 헤드라인 3번
+															</p>
+														</a>
+													</article>
+												</li>
+											</ul>
+											<div class="card-footer">
+												<!-- <a href="#" class="card-link">Card link</a> -->
+												<a href="#" class="card-link" style="border-bottom: dotted 1px rgba(160, 160, 160, 0.65);">더 많은 기사 보기</a>
+											</div>
+										</div>
+									</div>
+
+									<div class="col mb-1" style="padding: 0px 8px;">
+										<div class="card">
+											<div class="card-header" style="background: rgba(200, 191, 231, 1)">추천 뉴스</div>
+											<div class='media'>
+												<a href='#'>
+													<img src="https://t1.daumcdn.net/cfile/tistory/225292375410F5F90C" class="card-img-top" alt="..." />
+												</a>
+											</div>
+											<div class="card-body">
+												<article class='cd-card-id0'>
+													<div class='cd_wrapper'>
+														
+														<div class="cd_content">
+															<h3 class="card-title">
+																<a href='#'>
+																	<span class='cd_headline_icon'>
+																		<span class='cd_headline_text'>
+																			헤드라인 어쩌구저쩌구 큰일이 났어요
+																		</span>
+																	</span>
+																</a>
+															</h3>
+															<p class="card-text">
+																<a href='#'>
+																	<span class='cd_content_icon'>
+																		<span class='cd_content_text'>
+																			본문 내용 일부를 여기에 가져오면 되겠지 헤드라인만 쓰고싶으면 여기는 없애도 됨
+																		</span>
+																	</span>
+																</a>
+															</p>
+														</div>
+													<!-- </div> -->
+												</article>
+											</div>
+											<ul class="list-group list-group-flush">
+												<li class="list-group-item">
+													<article class='cd-card-id1'>
+														<a class='rmd_article' href='#'>
+															<p class='cd_headline_icon' style="margin-bottom: 0px;">
+																추천기사 헤드라인 1번
+															</p> 
+														</a>
+													</article>
+												</li>
+												<li class="list-group-item">
+													<article class='cd-card-id2'>
+														<a class='rmd_article' href='#'>
+															<p class='cd_headline_icon' style="margin-bottom: 0px;">		
+																추천기사 헤드라인 2번
+															</p>	
+														</a>
+													</article>
+												</li>
+												<li class="list-group-item">
+													<article class='cd-card-id2'>
+														<a class='rmd_article' href='#'>
+															<p class='cd_headline_icon' style="margin-bottom: 0px;">
+																추천기사 헤드라인 3번
+															</p>
+														</a>
+													</article>
+												</li>
+											</ul>
+											<div class="card-footer">
+												<!-- <a href="#" class="card-link">Card link</a> -->
+												<a href="#" class="card-link" style="border-bottom: dotted 1px rgba(160, 160, 160, 0.65);">더 많은 기사 보기</a>
+											</div>
+										</div>
+									</div>
+
+
+									<div class="col mb-1" style="padding: 0px 8px;">
+										<div class="card">
+											<div class="card-header" style="background: rgba(200, 191, 231, 1)">추천 뉴스</div>
+											<div class='media'>
+												<a href='#'>
+													<img src="https://i.ytimg.com/vi/8wdfk98H-T8/maxresdefault.jpg" class="card-img-top" alt="..." />
+												</a>
+											</div>
+											<div class="card-body">
+												<article class='cd-card-id0'>
+													<div class='cd_wrapper'>
+														
+														<div class="cd_content">
+															<h3 class="card-title">
+																<a href='#'>
+																	<span class='cd_headline_icon'>
+																		<span class='cd_headline_text'>
+																			헤드라인 어쩌구저쩌구 큰일이 났어요
+																		</span>
+																	</span>
+																</a>
+															</h3>
+															<p class="card-text">
+																<a href='#'>
+																	<span class='cd_content_icon'>
+																		<span class='cd_content_text'>
+																			본문 내용 일부를 여기에 가져오면 되겠지 헤드라인만 쓰고싶으면 여기는 없애도 됨
+																		</span>
+																	</span>
+																</a>
+															</p>
+														</div>
+													<!-- </div> -->
+												</article>
+											</div>
+											<ul class="list-group list-group-flush">
+												<li class="list-group-item">
+													<article class='cd-card-id1'>
+														<a class='rmd_article' href='#'>
+															<p class='cd_headline_icon' style="margin-bottom: 0px;">
+																추천기사 헤드라인 1번
+															</p> 
+														</a>
+													</article>
+												</li>
+												<li class="list-group-item">
+													<article class='cd-card-id2'>
+														<a class='rmd_article' href='#'>
+															<p class='cd_headline_icon' style="margin-bottom: 0px;">		
+																추천기사 헤드라인 2번
+															</p>	
+														</a>
+													</article>
+												</li>
+												<li class="list-group-item">
+													<article class='cd-card-id2'>
+														<a class='rmd_article' href='#'>
+															<p class='cd_headline_icon' style="margin-bottom: 0px;">
+																추천기사 헤드라인 3번
+															</p>
+														</a>
+													</article>
+												</li>
+											</ul>
+											<div class="card-footer">
+												<!-- <a href="#" class="card-link">Card link</a> -->
+												<a href="#" class="card-link" style="border-bottom: dotted 1px rgba(160, 160, 160, 0.65);">더 많은 기사 보기</a>
+											</div>
+										</div>
+									</div>
+
+									<div class="col mb-4" style="padding: 0px 8px;">
+										<div class="card">
+											<div class="card-header" style="background: rgba(200, 191, 231, 1)">추천 뉴스</div>
+											<div class='media'>
+												<a href='#'>
+													<img src="https://pbs.twimg.com/media/DiR7QyRUYAExC5g.jpg" class="card-img-top" alt="..." />
+												</a>
+											</div>
+											<div class="card-body">
+												<article class='cd-card-id0'>
+													<div class='cd_wrapper'>
+														
+														<div class="cd_content">
+															<h3 class="card-title">
+																<a href='#'>
+																	<span class='cd_headline_icon'>
+																		<span class='cd_headline_text'>
+																			헤드라인 어쩌구저쩌구 큰일이 났어요
+																		</span>
+																	</span>
+																</a>
+															</h3>
+															<p class="card-text">
+																<a href='#'>
+																	<span class='cd_content_icon'>
+																		<span class='cd_content_text'>
+																			본문 내용 일부를 여기에 가져오면 되겠지 헤드라인만 쓰고싶으면 여기는 없애도 됨
+																		</span>
+																	</span>
+																</a>
+															</p>
+														</div>
+													<!-- </div> -->
+												</article>
+											</div>
+											<ul class="list-group list-group-flush">
+												<li class="list-group-item">
+													<article class='cd-card-id1'>
+														<a class='rmd_article' href='#'>
+															<p class='cd_headline_icon' style="margin-bottom: 0px;">
+																추천기사 헤드라인 1번
+															</p> 
+														</a>
+													</article>
+												</li>
+												<li class="list-group-item">
+													<article class='cd-card-id2'>
+														<a class='rmd_article' href='#'>
+															<p class='cd_headline_icon' style="margin-bottom: 0px;">		
+																추천기사 헤드라인 2번
+															</p>	
+														</a>
+													</article>
+												</li>
+												<li class="list-group-item">
+													<article class='cd-card-id2'>
+														<a class='rmd_article' href='#'>
+															<p class='cd_headline_icon' style="margin-bottom: 0px;">
+																추천기사 헤드라인 3번
+															</p>
+														</a>
+													</article>
+												</li>
+											</ul>
+											<div class="card-footer">
+												<!-- <a href="#" class="card-link">Card link</a> -->
+												<a href="#" class="card-link" style="border-bottom: dotted 1px rgba(160, 160, 160, 0.65);">더 많은 기사 보기</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+
+
+						<div class='news_major2' style="margin-top: 80px;">
+							<header class="major">
+								<h2>컴퓨터 공학과</h2>
+							</header>
+							<div id="main">
+								<div class="row row-cols-1 row-cols-md-3">
+									<div class="col mb-1" style="padding: 0px 8px;">
+										<div class="card">
+											<div class="card-header" style="background: rgba(44, 87, 218, 0.5)">추천 뉴스</div>
+											<div class='media'>
+												<a data-target="#myModal" data-toggle="modal" class="Mainimg" href="#myModal">
+													<img src="https://images.idgesg.net/images/article/2017/10/wireless_network_internet_of_things_iot_thinkstock_853701554_3x2-100740688-large.jpg" class="card-img-top" alt="..." />
+												</a>
+												<div id="myModal" class="modal">
+													<!-- Modal content -->
+													<div class="modal-content">
+														<span class="close">&times;</span>                                                               
+														<h3>📢심각성 지표식</h3>
+														<p class='explain_function'>
+															y = ~~ <br>
+															~,~,~,~<~,~, 여섯가지 요인으로 경험적으로 심각성지표식을 계산함
+														</p>
+														<h3>📢체감 심각성 지표식</h3>
+														<p class='explain_function'>
+															y = ~~ <br>
+															~,~,~,~<~,~, 세가지 요인으로 경험적으로 심각성지표식을 계산함
+														</p>
+													</div>
+												</div>
+											</div>
+											<div class="card-body">
+												<article class='cd-card-id0'>
+													<div class='cd_wrapper'>
+														
+														<div class="cd_content">
+															<h3 class="card-title">
+																<a href='https://news.joins.com/article/23894066'>
+																	<span class='cd_headline_icon'>
+																		<span class='cd_headline_text'>
+																			헤드라인 어쩌구저쩌구 큰일이 났어요
+																		</span>
+																	</span>
+																</a>
+															</h3>
+															<p class="card-text">
+																<a href='https://news.joins.com/article/23894066'>
+																	<span class='cd_content_icon'>
+																		<span class='cd_content_text'>
+																			본문 내용 일부를 여기에 가져오면 되겠지 헤드라인만 쓰고싶으면 여기는 없애도 됨
+																		</span>
+																	</span>
+																</a>
+															</p>
+														</div>
+													<!-- </div> -->
+												</article>
+											</div>
+											<ul class="list-group list-group-flush">
+												<li class="list-group-item">
+													<article class='cd-card-id1'>
+														<a class='rmd_article' href='#'>
+															<p class='cd_headline_icon' style="margin-bottom: 0px;">
+																추천기사 헤드라인 1번
+															</p> 
+														</a>
+													</article>
+												</li>
+												<li class="list-group-item">
+													<article class='cd-card-id2'>
+														<a class='rmd_article' href='#'>
+															<p class='cd_headline_icon' style="margin-bottom: 0px;">		
+																추천기사 헤드라인 2번
+															</p>	
+														</a>
+													</article>
+												</li>
+												<li class="list-group-item">
+													<article class='cd-card-id2'>
+														<a class='rmd_article' href='#'>
+															<p class='cd_headline_icon' style="margin-bottom: 0px;">
+																추천기사 헤드라인 3번
+															</p>
+														</a>
+													</article>
+												</li>
+											</ul>
+											<div class="card-footer">
+												<!-- <a href="#" class="card-link">Card link</a> -->
+												<a href="#" class="card-link" style="border-bottom: dotted 1px rgba(160, 160, 160, 0.65);">더 많은 기사 보기</a>
+											</div>
+										</div>
+									</div>
+
+									<div class="col mb-1" style="padding: 0px 8px;">
+										<div class="card">
+											<div class="card-header" style="background: rgba(44, 87, 218, 0.5)">추천 뉴스</div>
+											<div class='media'>
+												<a href='#'>
+													<img src="https://cdn01.bespinglobal.com/wp-content/uploads/2018/07/step-by-step-ai-bigdata-series-1-fb.jpg" class="card-img-top" alt="..." />
+												</a>
+											</div>
+											<div class="card-body">
+												<article class='cd-card-id0'>
+													<div class='cd_wrapper'>
+														
+														<div class="cd_content">
+															<h3 class="card-title">
+																<a href='#'>
+																	<span class='cd_headline_icon'>
+																		<span class='cd_headline_text'>
+																			헤드라인 어쩌구저쩌구 큰일이 났어요
+																		</span>
+																	</span>
+																</a>
+															</h3>
+															<p class="card-text">
+																<a href='#'>
+																	<span class='cd_content_icon'>
+																		<span class='cd_content_text'>
+																			본문 내용 일부를 여기에 가져오면 되겠지 헤드라인만 쓰고싶으면 여기는 없애도 됨
+																		</span>
+																	</span>
+																</a>
+															</p>
+														</div>
+													<!-- </div> -->
+												</article>
+											</div>
+											<ul class="list-group list-group-flush">
+												<li class="list-group-item">
+													<article class='cd-card-id1'>
+														<a class='rmd_article' href='#'>
+															<p class='cd_headline_icon' style="margin-bottom: 0px;">
+																추천기사 헤드라인 1번
+															</p> 
+														</a>
+													</article>
+												</li>
+												<li class="list-group-item">
+													<article class='cd-card-id2'>
+														<a class='rmd_article' href='#'>
+															<p class='cd_headline_icon' style="margin-bottom: 0px;">		
+																추천기사 헤드라인 2번
+															</p>	
+														</a>
+													</article>
+												</li>
+												<li class="list-group-item">
+													<article class='cd-card-id2'>
+														<a class='rmd_article' href='#'>
+															<p class='cd_headline_icon' style="margin-bottom: 0px;">
+																추천기사 헤드라인 3번
+															</p>
+														</a>
+													</article>
+												</li>
+											</ul>
+											<div class="card-footer">
+												<!-- <a href="#" class="card-link">Card link</a> -->
+												<a href="#" class="card-link" style="border-bottom: dotted 1px rgba(160, 160, 160, 0.65);">더 많은 기사 보기</a>
+											</div>
+										</div>
+									</div>
+
+
+									<div class="col mb-1" style="padding: 0px 8px;">
+										<div class="card">
+											<div class="card-header" style="background: rgba(44, 87, 218, 0.5)">추천 뉴스</div>
+											<div class='media'>
+												<a href='#'>
+													<img src="https://www.researchgate.net/profile/Roohollah_Amiri/publication/323867253/figure/fig2/AS:606095550738432@1521515848671/Reinforcement-Learning-Agent-and-Environment.png" class="card-img-top" alt="..." />
+												</a>
+											</div>
+											<div class="card-body">
+												<article class='cd-card-id0'>
+													<div class='cd_wrapper'>
+														
+														<div class="cd_content">
+															<h3 class="card-title">
+																<a href='#'>
+																	<span class='cd_headline_icon'>
+																		<span class='cd_headline_text'>
+																			헤드라인 어쩌구저쩌구 큰일이 났어요
+																		</span>
+																	</span>
+																</a>
+															</h3>
+															<p class="card-text">
+																<a href='#'>
+																	<span class='cd_content_icon'>
+																		<span class='cd_content_text'>
+																			본문 내용 일부를 여기에 가져오면 되겠지 헤드라인만 쓰고싶으면 여기는 없애도 됨
+																		</span>
+																	</span>
+																</a>
+															</p>
+														</div>
+													<!-- </div> -->
+												</article>
+											</div>
+											<ul class="list-group list-group-flush">
+												<li class="list-group-item">
+													<article class='cd-card-id1'>
+														<a class='rmd_article' href='#'>
+															<p class='cd_headline_icon' style="margin-bottom: 0px;">
+																추천기사 헤드라인 1번
+															</p> 
+														</a>
+													</article>
+												</li>
+												<li class="list-group-item">
+													<article class='cd-card-id2'>
+														<a class='rmd_article' href='#'>
+															<p class='cd_headline_icon' style="margin-bottom: 0px;">		
+																추천기사 헤드라인 2번
+															</p>	
+														</a>
+													</article>
+												</li>
+												<li class="list-group-item">
+													<article class='cd-card-id2'>
+														<a class='rmd_article' href='#'>
+															<p class='cd_headline_icon' style="margin-bottom: 0px;">
+																추천기사 헤드라인 3번
+															</p>
+														</a>
+													</article>
+												</li>
+											</ul>
+											<div class="card-footer">
+												<!-- <a href="#" class="card-link">Card link</a> -->
+												<a href="#" class="card-link" style="border-bottom: dotted 1px rgba(160, 160, 160, 0.65);">더 많은 기사 보기</a>
+											</div>
+										</div>
+									</div>
+
+									<div class="col mb-4" style="padding: 0px 8px;">
+										<div class="card">
+											<div class="card-header" style="background: rgba(44, 87, 218, 0.5)">추천 뉴스</div>
+											<div class='media'>
+												<a href='#'>
+													<img src="https://www.securityindustry.org/wp-content/uploads/2019/02/blog-machines-learning-887x488.jpg" class="card-img-top" alt="..." />
+												</a>
+											</div>
+											<div class="card-body">
+												<article class='cd-card-id0'>
+													<div class='cd_wrapper'>
+														
+														<div class="cd_content">
+															<h3 class="card-title">
+																<a href='#'>
+																	<span class='cd_headline_icon'>
+																		<span class='cd_headline_text'>
+																			헤드라인 어쩌구저쩌구 큰일이 났어요
+																		</span>
+																	</span>
+																</a>
+															</h3>
+															<p class="card-text">
+																<a href='#'>
+																	<span class='cd_content_icon'>
+																		<span class='cd_content_text'>
+																			본문 내용 일부를 여기에 가져오면 되겠지 헤드라인만 쓰고싶으면 여기는 없애도 됨
+																		</span>
+																	</span>
+																</a>
+															</p>
+														</div>
+													<!-- </div> -->
+												</article>
+											</div>
+											<ul class="list-group list-group-flush">
+												<li class="list-group-item">
+													<article class='cd-card-id1'>
+														<a class='rmd_article' href='#'>
+															<p class='cd_headline_icon' style="margin-bottom: 0px;">
+																추천기사 헤드라인 1번
+															</p> 
+														</a>
+													</article>
+												</li>
+												<li class="list-group-item">
+													<article class='cd-card-id2'>
+														<a class='rmd_article' href='#'>
+															<p class='cd_headline_icon' style="margin-bottom: 0px;">		
+																추천기사 헤드라인 2번
+															</p>	
+														</a>
+													</article>
+												</li>
+												<li class="list-group-item">
+													<article class='cd-card-id2'>
+														<a class='rmd_article' href='#'>
+															<p class='cd_headline_icon' style="margin-bottom: 0px;">
+																추천기사 헤드라인 3번
+															</p>
+														</a>
+													</article>
+												</li>
+											</ul>
+											<div class="card-footer">
+												<!-- <a href="#" class="card-link">Card link</a> -->
+												<a href="#" class="card-link" style="border-bottom: dotted 1px rgba(160, 160, 160, 0.65);">더 많은 기사 보기</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+
+
+
+						<div class='news_total' style="margin-top: 80px;">
+							<header class="major">
+								<h2>종합 뉴스</h2>
+							</header>
+								<div class="row">
+									<div class="col-6 col-12-small">
+										<section class="box">
+											<header>
+												<h3>Magna tempus consequat</h3>
+												<p>Posted 45 minutes ago</p>
+											</header>
+											<p>Lorem ipsum dolor sit amet sit veroeros sed et blandit consequat sed veroeros lorem et blandit adipiscing feugiat phasellus tempus hendrerit, tortor vitae mattis tempor, sapien sem feugiat sapien, id suscipit magna felis nec elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos lorem ipsum dolor sit amet.</p>
+											<footer>
+												<ul class="actions">
+													<li><a href="#" class="button icon solid fa-file-alt">Continue Reading</a></li>
+													<li><a href="#" class="button alt icon solid fa-comment">33 comments</a></li>
+												</ul>
+											</footer>
+										</section>
+									</div>
+									<div class="col-6 col-12-small">
+										<section class="box">
+											<header>
+												<h3>Aptent veroeros aliquam</h3>
+												<p>Posted 45 minutes ago</p>
+											</header>
+											<p>Lorem ipsum dolor sit amet sit veroeros sed et blandit consequat sed veroeros lorem et blandit adipiscing feugiat phasellus tempus hendrerit, tortor vitae mattis tempor, sapien sem feugiat sapien, id suscipit magna felis nec elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos lorem ipsum dolor sit amet.</p>
+											<footer>
+												<ul class="actions">
+													<li><a href="#" class="button icon solid fa-file-alt">Continue Reading</a></li>
+													<li><a href="#" class="button alt icon solid fa-comment">33 comments</a></li>
+												</ul>
+											</footer>
+										</section>
+									</div>
+								</div>
+							</div>
+
+
+						
+
+						<!-- Pagination -->
+							<div class='pagination'>
+								<ul class="actions pagination">
+									<li><a href="" class="disabled button large previous">Previous Page</a></li>
+									<li><a href="#" class="button large next">Next Page</a></li>
+								</ul>
+							</div>
+
+					</div>
+
+				
+				<!-- About -->
+					<section class="blurb">
+						<h2>About</h2>
+						<p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod amet placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at phasellus sed ultricies.</p>
+						<ul class="actions">
+							<li><a href="#" class="button">Learn More</a></li>
+						</ul>
+					</section>
+
+				<!-- Footer -->
+					<section id="footer">
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon solid fa-rss"><span class="label">RSS</span></a></li>
+							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+						<p class="copyright">&copy; Untitled. Design: <a href="http://html5up.net">HTML5 UP</a>. Images: <a href="http://unsplash.com">Unsplash</a>.</p>
+						
+
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+			<script src="{% static 'assets/js/browser.min.js' %}"></script>
+			<script src="{% static 'assets/js/breakpoints.min.js' %}"></script>
+			<script src="{% static 'assets/js/util.js' %}"></script>
+			<script src="{% static 'assets/js/main.js' %}"></script>
+			<script type='text/javascript'>
+				// Get the modal
+				var modal = document.getElementById('myModal');
+		
+				// Get the button that opens the modal
+				var btn = document.getElementsByClassName("Mainimg");
+		
+				// Get the <span> element that closes the modal
+				var span = document.getElementsByClassName("close")[0];                                          
+		
+				// When the user clicks on the button, open the modal 
+				btn.onclick = function() {
+					modal.style.display = "block";
+				}
+		
+				// When the user clicks on <span> (x), close the modal
+				span.onclick = function() {
+					modal.style.display = "none";
+				}
+		
+				// When the user clicks anywhere outside of the modal, close it
+				window.onclick = function(event) {
+					if (event.target == modal) {
+						modal.style.display = "none";
+					}
+				}
+			</script>
+
+	</body>
+</html>
