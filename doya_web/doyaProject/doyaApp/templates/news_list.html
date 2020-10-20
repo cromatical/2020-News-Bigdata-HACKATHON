@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+  <link rel="stylesheet" href="{% static 'assets/css/news_list.css' %}">
+  <title>Document</title>
+</head>
+<body>
+  <!-- Header -->
+  <header id="header">
+    <h1><a href="{% url 'home' %}">취업빽</a></h1>
+    <nav class="links">
+      <ul>
+        <li><a href="{% url 'home' %}">HOME</a></li>
+        <li><a href="#">COMMUNITY</a></li>
+        <li><a href="{% url 'mypage' %}">MYPAGE</a></li>
+      </ul>
+    </nav>
+    <nav class="main">
+      <ul>
+        <li class="search">
+          <a class="fa-search" href="#search">Search</a>
+          <form id="search" method="get" action="#">
+            <input type="text" name="query" placeholder="Search" />
+          </form>
+        </li>
+        <li class="menu">
+          <a class="fa-bars" href="#menu">Menu</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+<!-- Menu -->
+  <section id="menu">
+
+    <!-- Search -->
+      <!-- <section>
+        <form class="search" method="get" action="#">
+          <input type="text" name="query" placeholder="Search" />
+        </form>
+      </section> -->
+
+
+    <!-- Actions -->
+    {% if user.is_authenticated %}
+      <section>
+        <ul class="actions stacked">
+          <li><div> Hello {{ user.username }} </div></li>
+          <li><a href="{% url 'logout' %}" class="button large fit">Log Out</a></li>
+        </ul>
+      </section>
+
+      {% comment %} <form id="logoutForm" action="/logout" method="post" class="navbar-right">
+        {% csrf_token %}
+        <ul class="nav navbar-nav navbar-right">
+          <li><span class="navbar-brand">Hello {{ user.username }}!</span></li>
+          <li><a href="javascript:document.getElementById('logoutForm').submit()">Log Out</a></li>
+        </ul>
+      </form> {% endcomment %}
+
+    {% else %}
+      <section>
+        <ul class="actions stacked">
+          <li><a href="{% url 'login' %}" class="button large fit">Log In</a></li>
+        </ul>
+      </section>
+
+    {% endif %}
+
+    <!-- Links -->
+      <section>
+
+        
+        <ul class="links">
+          <li>
+            <a href="#">
+              <h3>[스크랩북]AI</h3>
+              <p>2020-10-18부터 수집한 AI 기사들</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <h3>Dolor sit amet</h3>
+              <p>Sed vitae justo condimentum</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <h3>Feugiat veroeros</h3>
+              <p>Phasellus sed ultricies mi congue</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <h3>Etiam sed consequat</h3>
+              <p>Porta lectus amet ultricies</p>
+            </a>
+          </li>
+        </ul>
+      </section>
+  </section>
+  <div class="container">
+    <br>
+    <h1>더 많은 기사</h1>
+    <hr>
+    <br>
+    <!-- Main -->
+    <ul class="list-unstyled">
+      <li class="media">
+        <img src="..." class="mr-3" alt="...">
+        <div class="media-body">
+          <h5 class="mt-0 mb-1">List-based media object</h5>
+          Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+        </div>
+      </li>
+      <li class="media my-4">
+        <img src="..." class="mr-3" alt="...">
+        <div class="media-body">
+          <h5 class="mt-0 mb-1">List-based media object</h5>
+          Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+        </div>
+      </li>
+      <li class="media">
+        <img src="..." class="mr-3" alt="...">
+        <div class="media-body">
+          <h5 class="mt-0 mb-1">List-based media object</h5>
+          Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+        </div>
+      </li>
+    </ul>
+    <!-- Pagination -->
+    <nav aria-label="Page navigation example">
+      <ul class="pagination justify-content-center">
+        <li class="page-item">
+          <a class="page-link" href="#" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+          </a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- Footer -->
+    <section id="footer">
+      <ul class="icons">
+        <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+        <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+        <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+        <li><a href="#" class="icon solid fa-rss"><span class="label">RSS</span></a></li>
+        <li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+      </ul>
+      <p class="copyright">&copy; Untitled. Design: <a href="http://html5up.net">HTML5 UP</a>. Images: <a href="http://unsplash.com">Unsplash</a>.</p>
+    </section>
+  </div>
+
+
+  <!-- script -->
+  <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+  <script src="{% static 'assets/js/browser.min.js' %}"></script>
+  <script src="{% static 'assets/js/breakpoints.min.js' %}"></script>
+  <script src="{% static 'assets/js/util.js' %}"></script>
+  <script src="{% static 'assets/js/main.js' %}"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>
