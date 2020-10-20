@@ -30,4 +30,3 @@ class news_data(models.Model):
 
 
 
-
