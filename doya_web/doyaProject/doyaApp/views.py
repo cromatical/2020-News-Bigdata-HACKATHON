@@ -23,7 +23,7 @@ def login(request):
             return render(request, 'login.html', {'error' : 'username or password is incorrect'})
     
 
-    return render(request, 'login.html', context)
+    return render(request, 'login.html')
 
 
 def logout(request):

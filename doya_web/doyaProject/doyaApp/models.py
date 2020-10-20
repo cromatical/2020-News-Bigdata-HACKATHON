@@ -2,8 +2,6 @@ from django.contrib.auth.models import User
 from django.db import models
 
 
-
-
 major_lst = (('major_1', '간호'), ('major_2', '건축'), ('major_3', '경영'), ('major_4', '공예'), ('major_5', '관광'),
  ('major_6', '광고'), ('major_7', '교육'), ('major_8', '교통, 운송'), ('major_9', '기계, 금속'), ('major_10', '농림, 수산'),
  ('major_11', '도시, 토목'), ('major_12', '디자인'), ('major_13', '미술'), ('major_14', '법'), ('major_15', '뷰티아트'),
