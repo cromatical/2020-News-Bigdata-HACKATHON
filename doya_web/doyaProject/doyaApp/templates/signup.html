@@ -6,49 +6,50 @@
     <title>Document</title>
 </head>
 <body>
-    <header class='form-header'>
+    <div class='home-button'>
+        <a href='{% url 'home' %}'>home</a>
+    </div>
+    <div class='container'>
         <h1>Create your account</h1>
-    </header>
-
-    <form action='{% url 'signin' %}' method='POST'> {% csrf_token %}
-        <div>
-            <label for='user_id'>아이디를 입력하세요</label>
-            <input name='user_id'/>
-        </div>
-        <div>
-            <label for='user_pw'>비밀번호를 입력하세요</label>
-            <input name='user_pw'/>
-            <br/>
-            <label for='user_pw_check'>비밀번호를 한번더 입력하세요</label>
-            <input name='user_pw_check'/>
-        </div>
-        <div>
-            <label for='name'>이름을 입력하세요</label>
-            <input name='name'/>
-        </div>
-        <div>
-            <label for='email'>이메일을 입력하세요</label>
-            <input name='email'/>
-        </div>
-        <div>
-            <label for='phone_num'>휴대폰번호를 입력하세요</label>
-            <input name='phone_num'/>
-        </div>
-        <div>
-            <filedset>
-                <label for='user_major', class='radio_label'>전공</label>
-                <input id='user_major',
-                       name='user_type',
-                       type='radio',
-                       value='봉사자'/>         
-        </div>
-        <div>
-            <button type='submit'>등록하기</button>
-        </div>
-        <div>
-            <a href='{% url 'signin' %}'>뒤로가기</a>
-        </div>
+        
+        <form method='POST', action="{% url 'signup' %}">
+            {% csrf_token %}
+            ID:
+            <br>
+            <input name='user_id' type='text'>
+            <br> 
+            Password:
+            <br>
+            <input name='user_pw' type='password'>
+            <br>
+            Confirm Password:
+            <br>
+            <input name='user_pw_check' type='password'>
+            <br>
+            Username:
+            <br>
+            <input name='user_name' type='text'>
+            <br>
+            E-mail:
+            <br>
+            <input name='user_email' type='text'>
+            <br>
+            Major:
+            <br>
+            <select name='major_lst' size=1>
+            {% for major in major_lst %}
+                <option value= {{ major }}>{{ major }}</option>
+            {% endfor %}
+            </select>
+            <br>
+            Phone_Number:
+            <br>
+            <input name='user_phone_num' type='text'>
+            <br>
+            <br>
+            <input type='submit' class='btn btn-primary' value='sign up'>
         </form>
+    </div>
 </body>
 
 </html>
