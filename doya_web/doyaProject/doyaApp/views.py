@@ -70,3 +70,6 @@ def signup(request):
 
 def mypage(request):
     return render(request, 'mypage.html')
+
+def list(request):
+    return render(request, 'news_list.html')
