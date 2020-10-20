@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import User_info
+from .models import Profile
 
 from django.contrib.auth.models import User
 from django.contrib import auth
@@ -10,6 +10,7 @@ def home(request):
 
 
 def login(request):
+    
     if request.method == 'POST':
         user_id = request.POST['user_id']
         user_pw = request.POST['user_pw']
@@ -20,7 +21,9 @@ def login(request):
             return redirect('home')
         else:
             return render(request, 'login.html', {'error' : 'username or password is incorrect'})
-    return render(request, 'login.html')
+    
+
+    return render(request, 'login.html', context)
 
 
 def logout(request):
@@ -39,8 +42,20 @@ def signup(request):
         if request.POST['user_pw'] == request.POST['user_pw_check']:
             user = User.objects.create_user(
                 username=request.POST['user_id'],
-                password=request.POST['user_pw']
+                password=request.POST['user_pw'],
+                email=request.POST['user_email']
             )
+            user_name = request.POST['user_name']
+            user_phone_num = request.POST['user_phone_num']
+            user_major = request.POST['major_lst']
+
+            profile = Profile(user=user,
+                            user_name=user_name,
+                            user_phone_num=user_phone_num,
+                            user_major=user_major)
+            profile.save()
+
+
             auth.login(request, user)
             return redirect('home')
         return render(request, 'signup.html')
@@ -50,7 +65,8 @@ def signup(request):
     }
     return render(request, 'signup.html', context)
 
+            
+
+
 def mypage(request):
-
     return render(request, 'mypage.html')
-
