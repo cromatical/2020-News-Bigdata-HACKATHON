@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="\css\signin.css">
+</head>
+
+<body>
+    <div class='home-button'>
+        <a href='{% url 'home' %}'>home</a>
+    </div>
+    <div class='container'>
+        <h1>Welcome</h1>
+            
+        <form method='POST', action="{% url 'login' %}">
+            {% csrf_token %}
+            ID:
+            <br>
+            <input name='user_id' type='text'>
+            <br> 
+            Password:
+            <br>
+            <input name='user_pw' type='password'>
+            <br><br>
+            <input type="button" class='btn-new-account' value="회원가입" onclick="location.href= {% url 'signup' %}">
+            <input type='submit' class='btn-confirm-user' value='로그인'>
+        </form>
+    </div>
+   
+</body>
+</html>
+
+
+
