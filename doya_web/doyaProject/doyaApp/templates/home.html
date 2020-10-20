@@ -55,12 +55,30 @@
 
 
 						<!-- Actions -->
-						<section>
-							<ul class="actions stacked">
-								<li><a href="{% url 'login' %}" class="button large fit">Log In</a></li>
-							</ul>
-						</section>
+						{% if user.is_authenticated %}
+							<section>
+								<ul class="actions stacked">
+									<li><div> Hello {{ user.username }} </div></li>
+									<li><a href="{% url 'logout' %}" class="button large fit">Log Out</a></li>
+								</ul>
+							</section>
 
+							{% comment %} <form id="logoutForm" action="/logout" method="post" class="navbar-right">
+								{% csrf_token %}
+								<ul class="nav navbar-nav navbar-right">
+									<li><span class="navbar-brand">Hello {{ user.username }}!</span></li>
+									<li><a href="javascript:document.getElementById('logoutForm').submit()">Log Out</a></li>
+								</ul>
+							</form> {% endcomment %}
+
+						{% else %}
+							<section>
+								<ul class="actions stacked">
+									<li><a href="{% url 'login' %}" class="button large fit">Log In</a></li>
+								</ul>
+							</section>
+
+						{% endif %}
 
 						<!-- Links -->
 							<section>
