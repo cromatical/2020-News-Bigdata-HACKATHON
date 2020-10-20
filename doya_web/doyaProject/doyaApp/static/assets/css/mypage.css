@@ -3436,6 +3436,10 @@ input, select, textarea {
         max-width: 25%;
     }
 
+    .bd-toc-item{
+        display: flex;
+    }
+
 /* Main */
     .container-fluid{
         width: 100%;

@@ -52,7 +52,7 @@
 						<!-- Actions -->
 						<section>
 							<ul class="actions stacked">
-								<li><a href="{% url 'signin' %}" class="button large fit">Log In</a></li>
+								<li><a href="{% url 'login' %}" class="button large fit">Log In</a></li>
 							</ul>
 						</section>
 
@@ -97,13 +97,15 @@
                     <div class="container-fluid">
                         <div class="row flex-xl-nowrap">
                             <div class="col-md-3 col-xl-2 bd-sidebar">
-                                <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Main navigation">
-                                    <div class="bd-toc-item">
+                                <div class="collapse bd-links" id="bd-docs-nav" aria-label="Main navigation">
+                                    <div class="bd-toc-item">   
+                                        <img src="{% static "img/home-black-18dp.svg" %}">
                                         <a class="bd-toc-link" href="#">
                                             나의 스크랩
                                         </a>
                                     </div>
                                     <div class="bd-toc-item">
+                                        <img src="{% static "img/move_to_inbox-black-18dp.svg" %}">
                                         <a class="bd-toc-link" href="#">
                                             아카이브
                                         </a>
@@ -114,14 +116,14 @@
                                         </a>
                                     </div>
 
-                                <nav>
+                                </div>
                             </div>
                             <div class='content_container'>
                                 
                                 <div class='news_major1'>
                                     <div class="col mb-4">
                                         <div class="card" style="width: 18rem;">
-                                            <img src="{% static "img/파멸고양이.jpg" %}" class="card-img-top" width="100%" height="180" alt="...">
+                                            <img src="https://imgnews.pstatic.net/image/001/2020/10/20/PYH2020101919630001300_P4_20201020155230789.jpg?type=w647" class="card-img-top" width="100%" height="180" alt="...">
                                             <div class="card-body">
                                                 <h5 class="card-title">스크랩 북 제목 A</h5>
                                                 <p class="card-text">스크랩 북에 대한 간단한 정보를 적으면 될 것 같다.</p>
