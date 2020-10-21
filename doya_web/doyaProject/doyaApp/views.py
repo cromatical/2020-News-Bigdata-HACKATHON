@@ -73,3 +73,6 @@ def mypage(request):
 
 def list(request):
     return render(request, 'news_list.html')
+
+def scrapbook(request):
+    return render(request, 'scrapbook.html')
