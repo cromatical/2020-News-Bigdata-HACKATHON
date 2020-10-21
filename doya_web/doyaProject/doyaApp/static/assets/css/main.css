@@ -116,9 +116,11 @@ input, select, textarea {
 
 
 
+/* Card */
+.card, .card-header, .media {
+	border-radius: 0 !important;
+}
 
-
- 
 
 
 
