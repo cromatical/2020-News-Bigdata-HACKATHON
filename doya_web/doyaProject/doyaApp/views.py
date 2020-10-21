@@ -89,3 +89,6 @@ def list(request):
 
 def scrapbook(request):
     return render(request, 'scrapbook.html')
+
+def scrapB1(request):
+    return render(request, 'scrapB1.html')

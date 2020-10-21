@@ -207,7 +207,7 @@ input, select, textarea {
 		color: #3c3b3b;
 		font-family: "Raleway", Helvetica, sans-serif;
 		font-weight: 800;
-		letter-spacing: 0.25em;
+		/* letter-spacing: 0.25em; */
 		line-height: 1.65;
 		margin: 0 0 1em 0;
 		text-transform: uppercase;
@@ -3501,8 +3501,15 @@ input, select, textarea {
         padding: 1.25rem;
     }
     .card-title {
-        margin-bottom: .75rem;
-    }
+		margin-bottom: .75rem;
+		font-size: 18px;
+	}
+	.card-text{
+		font-size: 14px;
+	}
+	.card-date{
+		font-size: 12px;
+	}
 
 
 	#main {
