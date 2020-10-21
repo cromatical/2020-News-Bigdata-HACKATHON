@@ -21,3 +21,7 @@ major_fold = os.listdir(data_path)
 print(major_fold)
 
 
+path = os.path.join(data_path + '\전산학&컴퓨터', '2020', '2020_news_data.csv')
+print(path)
+news_data = pd.read_csv(path, encoding='cp949')
+print(news_data)
