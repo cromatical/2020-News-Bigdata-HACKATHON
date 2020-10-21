@@ -23,7 +23,17 @@ class Profile(models.Model):
     user_major = models.CharField(choices=major_lst, max_length=20, null=True)
 
 
+class User__click_news(models.Model):
+    user_info = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name='user')
+    last_user_news_title = models.CharField(max_length=)
 
+
+
+class User_scrap(models.Model):
+    user_info = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name='user')
+    
 
 
 
