@@ -1,12 +1,29 @@
 from django.shortcuts import render, redirect
-from .models import Profile
 
+from .models import Profile
 from django.contrib.auth.models import User
 from django.contrib import auth
 
+
+import os
+import pandas as pd
+import numpy as np
+
 # Create your views here.
+
+# data_path = r'\doyaProject\doyaApp\data'
+# major_fold = os.listdir(data_path) 
+
+
 def home(request):
+                   
+    # print(major_fold)
+    
     return render(request, 'home.html')
+
+def news_list(request):
+
+    return render(request, 'list.html')
 
 
 def login(request):
@@ -21,7 +38,6 @@ def login(request):
             return redirect('home')
         else:
             return render(request, 'login.html', {'error' : 'username or password is incorrect'})
-    
 
     return render(request, 'login.html')
 
@@ -30,12 +46,11 @@ def logout(request):
     auth.logout(request)
     return redirect('home')
 
-
-major_lst = ['간호', '건축', '경영', '공예', '관광', '광고', '교육', '교통, 운송', '기계, 금속',
-    '농림, 수산', '도시, 토목', '디자인', '미술', '법', '뷰티아트', '사진, 만화', '사회과학',
-    '산업공학', '생명과학', '서비스', '소재, 재료', '수의학', '식품', '약학', '언론', '언어, 문학', '에너지', '연극, 영화',
-    '영상, 예술', '유아교육', '음악', '응용소프트웨어', '의류', '인문과학', '자연과학', '전기, 전자',
-    '전산학, 컴퓨터', '정보, 통신', '조선', '체육', '초등교육', '치료, 보건', '특수교육', '화공']
+major_lst = ['간호', '건축', '경영', '공예', '관광', '광고', '교육', '교통&운송', '기계&금속',
+    '농림&수산', '도시&토목', '디자인', '미술', '법', '뷰티아트', '사진&만화', '사회과학',
+    '산업공학', '생명과학', '서비스', '소재&재료', '수의학', '식품', '약학', '언론', '언어&문학', '에너지', '연극&영화',
+    '영상&예술', '유아교육', '음악', '응용소프트웨어', '의류', '인문과학', '자연과학', '전기&전자',
+    '전산학&컴퓨터', '정보&통신', '조선', '체육', '초등교육', '치료&보건', '특수교육', '화공']
 
 def signup(request):
     if request.method == 'POST':
@@ -54,8 +69,6 @@ def signup(request):
                             user_phone_num=user_phone_num,
                             user_major=user_major)
             profile.save()
-
-
             auth.login(request, user)
             return redirect('login')
         return render(request, 'signup.html')

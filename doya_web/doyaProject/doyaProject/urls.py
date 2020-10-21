@@ -26,4 +26,5 @@ urlpatterns = [
     path('mypage/', views.mypage, name='mypage'),
     path('list/', views.list, name="list"),
     path('scrapbook/', views.scrapbook, name='scrapbook'),
+    path('news_list/', views.news_list, name="news_list"),
 ]
