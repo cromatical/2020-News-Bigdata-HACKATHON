@@ -3497,14 +3497,15 @@ input, select, textarea {
 
     .card-head{
         display: flex;
-        flex-direction: row;
+		flex-direction: row;
+		justify-content : space-between;
         flex: 1 1 auto;
         min-height: 1px;
         padding: 0.6rem;
     }
 
     .card-head-img{
-		padding-left: 3em;
+		padding-right: 0.5em;
     }
 
     .card-head-title{
@@ -3531,7 +3532,7 @@ input, select, textarea {
         font-size: 14px;
         color: black;
         margin-bottom: 0rem;
-        margin-top: -1em;
+        margin-top: 0em;
     }
 
 
