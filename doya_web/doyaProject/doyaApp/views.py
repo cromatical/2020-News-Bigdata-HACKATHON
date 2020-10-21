@@ -142,3 +142,12 @@ def news_list(request):
 
 def mypage(request):
     return render(request, 'mypage.html')
+
+def list(request):
+    return render(request, 'news_list.html')
+
+def scrapbook(request):
+    return render(request, 'scrapbook.html')
+
+def scrapB1(request):
+    return render(request, 'scrapB1.html')

@@ -3495,22 +3495,48 @@ input, select, textarea {
         border-radius: .25rem;
     }
 
-    .card-body{
+    .card-head{
+        display: flex;
+		flex-direction: row;
+		justify-content : space-between;
         flex: 1 1 auto;
         min-height: 1px;
-        padding: 1.25rem;
+        padding: 0.6rem;
     }
+
+    .card-head-img{
+		padding-right: 0.5em;
+    }
+
+    .card-head-title{
+        font-family: "Raleway", Helvetica, sans-serif;
+        margin-bottom: -.25rem;
+        font-size: x-large;
+        /* letter-spacing: -1.25px; */
+        color: black;
+    }
+
+    .card-body{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+        flex: 1 1 auto;
+        min-height: 1px;
+        padding: 0.5rem 0.5rem 0.25rem 0.5rem;
+    }
+
+
     .card-title {
-		margin-bottom: .75rem;
-		letter-spacing: 0em;
-		font-size: 18px;
-	}
-	.card-text{
-		font-size: 14px;
-	}
-	/* .card-date{
-		font-size: 12px;
-	} */
+        font-family: "Raleway", Helvetica, sans-serif;
+        margin-bottom: .75rem;
+    }
+    .card-text{
+        font-family: "Raleway", Helvetica, sans-serif;
+        font-size: 14px;
+        color: black;
+        margin-bottom: 0rem;
+        margin-top: 0em;
+    }
 
 
 	#main {
