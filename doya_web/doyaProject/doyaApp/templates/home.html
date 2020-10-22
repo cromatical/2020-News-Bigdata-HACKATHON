@@ -26,7 +26,9 @@
 							<ul>
 								<li><a href="{% url 'home' %}">HOME</a></li>
 								<li><a href="#">COMMUNITY</a></li>
-								<li><a href="{% url 'mypage' %}">MYPAGE</a></li>
+								{% if user.is_authenticated %}
+								<li><a href="{% url 'mypaga' %}">MYPAGE</a></li>
+								{% endif %}
 							</ul>
 						</nav>
 						<nav class="main">
@@ -358,7 +360,7 @@
 										<div class='card-header' style="background-color: rgba(223, 228, 234,1.0);">
 											<strong>공유</strong>를 많이 한 스크랩북
 										</div>
-										<div class="card" style="width: 18rem; margin-left: 11%;">
+										<div class="card" style="width: 18rem; margin-left: 6%;">
 											<div class='card-head'>
 												<a href="#" class="card-head-title">IoT</a>
 												<img class="card-head-img" src="{%static "img/language-black-18dp.svg" %}">
@@ -378,7 +380,7 @@
 										<div class='card-header' style="background-color: rgba(223, 228, 234,1.0);">
 											<strong>좋아요</strong>가 많은 스크랩북
 										</div>
-										<div class="card" style="width: 18rem; margin-left: 11%;">
+										<div class="card" style="width: 18rem; margin-left: 6%;">
 											<div class='card-head'>
 												<a href="#" class="card-head-title">보안</a>
 												<img class="card-head-img" src="{%static "img/language-black-18dp.svg" %}">
@@ -708,12 +710,12 @@
 										<div class='card-header' style="background-color: rgba(223, 228, 234,1.0);">
 											<strong>공유</strong>를 많이 한 스크랩북
 										</div>
-										<div class="card" style="width: 18rem; margin-left: 11%;">
+										<div class="card" style="width: 18rem; margin-left: 6%;">
 											<div class='card-head'>
-												<a href="#" class="card-head-title">IoT</a>
+												<a href="#" class="card-head-title">연극</a>
 												<img class="card-head-img" src="{%static "img/language-black-18dp.svg" %}">
 											</div>
-											<img src="https://130e178e8f8ba617604b-8aedd782b7d22cfe0d1146da69a52436.ssl.cf1.rackcdn.com/gao-assesses-iot-cybersecurity-other-risks-showcase_image-6-a-9926.jpg" class="card-img-top" width="100%" height="180" alt="...">
+											<img src="https://post-phinf.pstatic.net/MjAxOTA2MjdfOSAg/MDAxNTYxNjIyOTEzNTA4.uYBi43fnobj_Fu7FuBgrA2Bbp1oMnfheX_ixNvZDQvQg.jgs8xLpzH0Dd9Co7LvdkCQMYETllKBbNXWUj8FsNdzgg.JPEG/2019_%ED%82%AC%EB%AF%B8%EB%82%98%EC%9A%B0_PRESS3.jpg?type=w1200" class="card-img-top" width="100%" height="180" alt="...">
 											<div class="card-body">
 												<p class="card-text">2020-10-19</p>
 												<div class='card-imgbox'>
@@ -728,12 +730,12 @@
 										<div class='card-header' style="background-color: rgba(223, 228, 234,1.0);">
 											<strong>좋아요</strong>가 많은 스크랩북
 										</div>
-										<div class="card" style="width: 18rem; margin-left: 11%;">
+										<div class="card" style="width: 18rem; margin-left: 6%;">
 											<div class='card-head'>
-												<a href="#" class="card-head-title">보안</a>
+												<a href="#" class="card-head-title">뮤지컬</a>
 												<img class="card-head-img" src="{%static "img/language-black-18dp.svg" %}">
 											</div>
-											<img src="https://www.ndsl.kr/ndsl/commons/util/imgFileView.do?fileNm=B20170328104752379_thum.jpg&folderNm=201703&gubun=issue" class="card-img-top" width="100%" height="180" alt="...">
+											<img src="https://post-phinf.pstatic.net/MjAyMDA0MTBfMTUx/MDAxNTg2NTA0NTA1NTkx.dRXr3Plt4cQjCCTsV4Dq6A7Ns5XlMZ7YxPCdN27gigEg.a0MnRl1K8IvggRgPhRqoxoTt0j5oUBEQkNKLKk-usXsg.JPEG/2019%EB%A7%98%EB%A7%88%EB%AF%B8%EC%95%84_%EB%8F%84%EB%82%98%28%EC%B5%9C%EC%A0%95%EC%9B%90%29_%ED%83%80%EB%83%90%28%ED%99%8D%EC%A7%80%EB%AF%BC%29_%EB%A1%9C%EC%A7%80%28%EB%B0%95%EC%A4%80%EB%A9%B4%29.jpg?type=w1200" class="card-img-top" width="100%" height="180" alt="...">
 											<div class="card-body">
 												<p class="card-text">2020-10-19</p>
 												<div class='card-imgbox'>
@@ -1059,12 +1061,12 @@
 										<div class='card-header' style="background-color: rgba(223, 228, 234,1.0);">
 											<strong>공유</strong>를 많이 한 스크랩북
 										</div>
-										<div class="card" style="width: 18rem; margin-left: 11%;">
+										<div class="card" style="width: 18rem; margin-left: 6%;">
 											<div class='card-head'>
-												<a href="#" class="card-head-title">IoT</a>
+												<a href="#" class="card-head-title">법</a>
 												<img class="card-head-img" src="{%static "img/language-black-18dp.svg" %}">
 											</div>
-											<img src="https://130e178e8f8ba617604b-8aedd782b7d22cfe0d1146da69a52436.ssl.cf1.rackcdn.com/gao-assesses-iot-cybersecurity-other-risks-showcase_image-6-a-9926.jpg" class="card-img-top" width="100%" height="180" alt="...">
+											<img src="https://lh3.googleusercontent.com/proxy/Hox6cGsx2spYqWrhq0p6WfSAmEo3DEI7-nICfsWFDZdU7_aneFOBLZeu4wIcDKeTex518CDb51JXO6Uh1kCSoomQCnLgvnn1wV84WEawa8YMmpLdF1ARVgCT7NjVakagePopwCivcHJpMf5ijr7CS4scOIRd2RWw2eNPPJD15OWsf0uJjqreIBqV" class="card-img-top" width="100%" height="180" alt="...">
 											<div class="card-body">
 												<p class="card-text">2020-10-19</p>
 												<div class='card-imgbox'>
@@ -1079,12 +1081,12 @@
 										<div class='card-header' style="background-color: rgba(223, 228, 234,1.0);">
 											<strong>좋아요</strong>가 많은 스크랩북
 										</div>
-										<div class="card" style="width: 18rem; margin-left: 11%;">
+										<div class="card" style="width: 18rem; margin-left: 6%;">
 											<div class='card-head'>
-												<a href="#" class="card-head-title">보안</a>
+												<a href="#" class="card-head-title">법</a>
 												<img class="card-head-img" src="{%static "img/language-black-18dp.svg" %}">
 											</div>
-											<img src="https://www.ndsl.kr/ndsl/commons/util/imgFileView.do?fileNm=B20170328104752379_thum.jpg&folderNm=201703&gubun=issue" class="card-img-top" width="100%" height="180" alt="...">
+											<img src="https://image.zdnet.co.kr/2020/05/22/jtwer_ZxRUb5EgOU05Nq.jpg" class="card-img-top" width="100%" height="180" alt="...">
 											<div class="card-body">
 												<p class="card-text">2020-10-19</p>
 												<div class='card-imgbox'>

@@ -74,8 +74,8 @@ def home(request):
 
 # ------------------------------------------------------------------------------------------------
 
-        random_news_data = pd.read_csv(r'C:\Users\MyLaptop\Desktop\개발\2020_News_Bigdata_HACKATHON\doya_web\doyaProject\doyaApp\data\전산학&컴퓨터\2020_news_part_data.csv', encoding='utf-8')
-        recent_news_data = pd.read_csv(r'C:\Users\MyLaptop\Desktop\개발\2020_News_Bigdata_HACKATHON\doya_web\doyaProject\doyaApp\data\전산학&컴퓨터\2020_news_data.csv', encoding='utf-8')
+        random_news_data = pd.read_csv(r'C:\Users\KOH_AI\Documents\git_Dasktop\2020_News_Bigdata_HACKATHON\doya_web\doyaProject\doyaApp\data\전산학&컴퓨터\2020_news_part_data.csv', encoding='utf-8')
+        recent_news_data = pd.read_csv(r'C:\Users\KOH_AI\Documents\git_Dasktop\2020_News_Bigdata_HACKATHON\doya_web\doyaProject\doyaApp\data\전산학&컴퓨터\2020_news_data.csv', encoding='utf-8')
         
         random_news_data_num1 = random_news_data.iloc[0]
         random_news_data_lst = random_news_data.iloc[1:5]
