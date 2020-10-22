@@ -121,7 +121,9 @@ input, select, textarea {
 	border-radius: 0 !important;
 }
 
-
+.mb-3 > .card {
+	margin-top: 15%;
+}
 
 
 
