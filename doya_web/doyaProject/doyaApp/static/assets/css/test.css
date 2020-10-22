@@ -3517,26 +3517,24 @@ input, select, textarea {
     }
 
     .card-body{
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-        flex: 1 1 auto;
+		flex: 1 1 auto;
         min-height: 1px;
-        padding: 0.5rem 0.5rem 0.25rem 0.5rem;
+        padding: 1.25rem;
     }
 
 
     .card-title {
         font-family: "Raleway", Helvetica, sans-serif;
-        margin-bottom: .75rem;
+		margin-bottom: .75rem;
+		letter-spacing: 0em;
+		font-size: 18px;
     }
     .card-text{
-        font-family: "Raleway", Helvetica, sans-serif;
         font-size: 14px;
-        color: black;
-        margin-bottom: 0rem;
-        margin-top: 0em;
-    }
+	}
+	.card-date{
+		font-size: 12px;
+	}
 
 
 	#main {
@@ -3827,3 +3825,4 @@ input, select, textarea {
 			}
 
 		}
+
