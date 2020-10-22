@@ -200,7 +200,7 @@ input, select, textarea {
 	}
 
 	p {
-		margin: 1em 0 1em 0;
+		margin: 0 0 2em 0;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
@@ -3495,19 +3495,42 @@ input, select, textarea {
         border-radius: .25rem;
     }
 
-    .card-body{
+    .card-head{
+        display: flex;
+		flex-direction: row;
+		justify-content : space-between;
         flex: 1 1 auto;
+        min-height: 1px;
+        padding: 0.6rem;
+    }
+
+    .card-head-img{
+		padding-right: 0.5em;
+    }
+
+    .card-head-title{
+        font-family: "Raleway", Helvetica, sans-serif;
+        margin-bottom: -.25rem;
+        font-size: x-large;
+        /* letter-spacing: -1.25px; */
+        color: black;
+    }
+
+    .card-body{
+		flex: 1 1 auto;
         min-height: 1px;
         padding: 1.25rem;
     }
+
+
     .card-title {
+        font-family: "Raleway", Helvetica, sans-serif;
 		margin-bottom: .75rem;
 		letter-spacing: 0em;
 		font-size: 18px;
-	}
-	.card-text{
-		font-size: 14px;
-		border-top: solid 1px #ccc;
+    }
+    .card-text{
+        font-size: 14px;
 	}
 	.card-date{
 		font-size: 12px;
@@ -3544,61 +3567,21 @@ input, select, textarea {
 	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
-.modal-header {
-	flex-direction: column;
-	align-items: stretch;
-
-    display: flex;
-    -webkit-box-align: start;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
-    padding: 1rem;
-    border-bottom: 1px solid #e9ecef;
-    border-top-left-radius: .3rem;
-    border-top-right-radius: .3rem;
-}
-
-.modal-header > .modal-title {
-	font-size: 15px;
-}
-.modal-title {
-    margin-bottom: 0;
-    line-height: 1.5;
-}
-
-.modal-body {
-	-webkit-appearance:none;
-}
-
 /* Modal Content/Box */
 .modal-content {
 	background-color: #fefefe;
-	margin: 15% auto !important; /* 15% from the top and centered */
+	margin: 15% auto; /* 15% from the top and centered */
 	padding: 20px;
 	border: 1px solid #888;
 	width: 50%; /* Could be more or less, depending on screen size */        
-	font-size: 1rem;                  
+	font-size: 10px;                  
 }
-
-.scrap {
-	width: 20%;
-  }
-  
-  
-  .checkbox_scrapbook {
-	text-align: left;
-  }
-  
-
 /* The Close Button */
 .close {
 	color: #aaa;
 	float: right;
 	font-size: 28px;
 	font-weight: bold;
-	line-height: 1;
-	text-shadow: 0 1px 0 #fff;
-    opacity: .5;
 }
 .close:hover,
 .close:focus {
@@ -3607,67 +3590,8 @@ input, select, textarea {
 	cursor: pointer;
 }
 
-/* scss */
-.modal-header .close {
-    padding: 1rem;
-    margin: -1rem -1rem -1rem auto;
-}
-.modal-open .modal {
-    overflow-x: hidden;
-    overflow-y: auto;
-}
 
-.modal-body {
-    position: relative;
-    -webkit-box-flex: 1;
-    flex: 1 1 auto;
-    padding: 1rem;
-}
-.modal-footer {
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-    -webkit-box-pack: end;
-    justify-content: flex-end;
-    padding: 1rem;
-    border-top: 1px solid #e9ecef;
-}
-.modal-footer>:not(:last-child) {
-    margin-right: .25rem;
-}
-.input-group {
-    position: relative;
-    display: -webkit-box;
-    display: flex;
-    flex-wrap: wrap;
-    -webkit-box-align: stretch;
-    align-items: stretch;
-    width: 100%;
-}
-.modal-footer>:not(:last-child) {
-    margin-right: .25rem;
-}
 
-.btn-primary {
-    background-color: #86c1ff;
-    border-color: #86c1ff;
-}
-.btn {
-    display: inline-block;
-    font-weight: 400;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    -webkit-user-select: none;
-    user-select: none;
-    border: 1px solid transparent;
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: .25rem;
-    transition: color .15s;
-}
 /* Sidebar */
 
 	/* #sidebar {
@@ -3901,3 +3825,4 @@ input, select, textarea {
 			}
 
 		}
+
