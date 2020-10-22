@@ -8,22 +8,78 @@ from django.contrib import auth
 import os
 import pandas as pd
 import numpy as np
+import glob
+import random
+import sklearn
+
 
 # Create your views here.
 
-# data_path = r'\doyaProject\doyaApp\data'
-# major_fold = os.listdir(data_path) 
-
-
 def home(request):
-                   
-    # print(major_fold)
+    user_major = None
     
-    return render(request, 'home.html')
+    data_path = r'C:\Users\MyLaptop\Desktop\개발\2020_News_Bigdata_HACKATHON\doya_web\doyaProject\doyaApp\data'
+    major_fold = os.listdir(data_path)                    
+    # print(major_fold)
+
+    if request.user.is_authenticated:
+        user = User.objects.get(id=request.user.id)  
+        profile = Profile.objects.filter(user=user).get() 
+        # print(user, profile.user_major)
+        
+        for major in major_fold:
+            if profile.user_major == major:
+                user_major = major
+                break
+
+        news_dir = os.path.join(data_path, user_major)
+        news_fold = os.listdir(news_dir)
+
+        os.chdir(news_dir)
+        print(news_fold)
+        recently_news_file = glob.glob('2020_*.csv')
+        print(recently_news_file)
+
+        news_data = pd.read_csv(recently_news_file[0], error_bad_lines=False, engine="python", encoding='utf-8')
+        print(news_data.columns)
+
+        recently_news_lst_num1 = news_data.iloc[0]
+        recently_news_lst = news_data.iloc[1:5]
+
+        print(recently_news_lst_num1)
+        print(recently_news_lst)
+
+        df_shuffled=sklearn.utils.shuffle(news_data)
+        df_shuffled=sklearn.utils.shuffle(df_shuffled)
+        random_news_lst_num1 = df_shuffled.iloc[0]
+        random_news_lst = df_shuffled.iloc[1:5]
+        
+        print(random_news_lst_num1)
+        print(random_news_lst)
+
+        
+        context = {
+            'recently_news_lst_num1' : recently_news_lst_num1,
+            'recently_news_lst' : recently_news_lst,
+            'random_news_lst_num1': random_news_lst_num1,
+            'random_news_lst': random_news_lst
+        } 
+
+
+    else :
+
+
+        context = {
+            'news' : True
+        }
+
+    return render(request, 'home.html', context)
+
+
 
 def news_list(request):
 
-    return render(request, 'list.html')
+    return render(request, 'news_list.html')
 
 
 def login(request):
@@ -78,7 +134,12 @@ def signup(request):
     }
     return render(request, 'signup.html', context)
 
-            
+
+
+def news_list(request):
+
+    
+    return render(request, 'news_list.html')
 
 
 def mypage(request):
