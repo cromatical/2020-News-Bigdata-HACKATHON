@@ -16,71 +16,105 @@ import sklearn
 # Create your views here.
 
 def home(request):
+
+    context = {
+            'random_news_data_num1' : None,
+            'random_news_data_lst' : None,
+            'recent_news_data_num1': None,
+            'recent_news_data_lst': None
+        } 
+
+
+
     user_major = None
     
+
     data_path = r'C:\Users\KOH_AI\Documents\git_Dasktop\2020_News_Bigdata_HACKATHON\doya_web\doyaProject\doyaApp\data'
     major_fold = os.listdir(data_path)                    
+
+    # data_path = r'C:\Users\MyLaptop\Desktop\개발\2020_News_Bigdata_HACKATHON\doya_web\doyaProject\doyaApp\data'
+    # major_fold = os.listdir(data_path)                    
+
     # print(major_fold)
 
     if request.user.is_authenticated:
         user = User.objects.get(id=request.user.id)  
         profile = Profile.objects.filter(user=user).get() 
         # print(user, profile.user_major)
+    #--------------------------------------------------------------------------------------------#
+        # for major in major_fold:
+        #     if profile.user_major == major:
+        #         user_major = major
+        #         break
+
+        # news_dir = os.path.join(data_path, user_major)
+        # news_fold = os.listdir(news_dir)
+
+        # os.chdir(news_dir)
+        # print(news_fold)
+        # recently_news_file = glob.glob('2020_*.csv')
+        # print(recently_news_file)
+
+        # news_data = pd.read_csv(recently_news_file[0], error_bad_lines=False, engine="python", encoding='utf-8')
+        # print(news_data.columns)
+
+        # recently_news_lst_num1 = news_data.iloc[0]
+        # recently_news_lst = news_data.iloc[1:5]
+
+        # print(recently_news_lst_num1)
+        # print(recently_news_lst)
+
+        # df_shuffled=sklearn.utils.shuffle(news_data)
+        # df_shuffled=sklearn.utils.shuffle(df_shuffled)
+        # random_news_lst_num1 = df_shuffled.iloc[0]
+        # random_news_lst = df_shuffled.iloc[1:5]
         
-        for major in major_fold:
-            if profile.user_major == major:
-                user_major = major
-                break
+        # print(random_news_lst_num1)
+        # print(random_news_lst)
 
-        news_dir = os.path.join(data_path, user_major)
-        news_fold = os.listdir(news_dir)
+# ------------------------------------------------------------------------------------------------
 
-        os.chdir(news_dir)
-        print(news_fold)
-        recently_news_file = glob.glob('2020_*.csv')
-        print(recently_news_file)
-
-        news_data = pd.read_csv(recently_news_file[0], error_bad_lines=False, engine="python", encoding='utf-8')
-        print(news_data.columns)
-
-        recently_news_lst_num1 = news_data.iloc[0]
-        recently_news_lst = news_data.iloc[1:5]
-
-        print(recently_news_lst_num1)
-        print(recently_news_lst)
-
-        df_shuffled=sklearn.utils.shuffle(news_data)
-        df_shuffled=sklearn.utils.shuffle(df_shuffled)
-        random_news_lst_num1 = df_shuffled.iloc[0]
-        random_news_lst = df_shuffled.iloc[1:5]
+        random_news_data = pd.read_csv(r'C:\Users\MyLaptop\Desktop\개발\2020_News_Bigdata_HACKATHON\doya_web\doyaProject\doyaApp\data\전산학&컴퓨터\2020_news_part_data.csv', encoding='utf-8')
+        recent_news_data = pd.read_csv(r'C:\Users\MyLaptop\Desktop\개발\2020_News_Bigdata_HACKATHON\doya_web\doyaProject\doyaApp\data\전산학&컴퓨터\2020_news_data.csv', encoding='utf-8')
         
-        print(random_news_lst_num1)
-        print(random_news_lst)
+        random_news_data_num1 = random_news_data.iloc[0]
+        random_news_data_lst = random_news_data.iloc[1:5]
 
-        
-        context = {
-            'recently_news_lst_num1' : recently_news_lst_num1,
-            'recently_news_lst' : recently_news_lst,
-            'random_news_lst_num1': random_news_lst_num1,
-            'random_news_lst': random_news_lst
-        } 
+        recent_news_data_num1 = recent_news_data.iloc[0]
+        recent_news_data_lst = recent_news_data.iloc[1:5]
 
 
-    else :
+        context['random_news_data_num1'] = random_news_data_num1
+        context['random_news_data_lst'] = random_news_data_lst
+        context['recent_news_data_num1'] = recent_news_data_num1
+        context['recent_news_data_lst'] = recent_news_data_lst
 
-
-        context = {
-            'news' : True
-        }
 
     return render(request, 'home.html', context)
 
 
 
 def news_list(request):
+    
+    random_news_data = pd.read_csv(r'C:\Users\MyLaptop\Desktop\개발\2020_News_Bigdata_HACKATHON\doya_web\doyaProject\doyaApp\data\전산학&컴퓨터\2020_news_part_data.csv', encoding='utf-8')
+    recent_news_data = pd.read_csv(r'C:\Users\MyLaptop\Desktop\개발\2020_News_Bigdata_HACKATHON\doya_web\doyaProject\doyaApp\data\전산학&컴퓨터\2020_news_data.csv', encoding='utf-8')
+    
+    random_news_data_lst = random_news_data.iloc[:10]
+    print('--------------------------@@@@@@@@@@@@@@@@@@@@@@')
+    print(random_news_data_lst)
 
-    return render(request, 'news_list.html')
 
+    recent_news_data_lst = recent_news_data.iloc[:10]
+
+    context = {
+            'random_news_data_lst' : random_news_data_lst,
+            'recent_news_data_lst': recent_news_data_lst
+        } 
+
+    return render(request, 'news_list.html', context)
+
+def news_list2(request):
+    return render(request, 'news_list2.html')
 
 def login(request):
     
