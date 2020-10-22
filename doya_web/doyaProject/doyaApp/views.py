@@ -18,7 +18,7 @@ import sklearn
 def home(request):
     user_major = None
     
-    data_path = './doyaApp/data'
+    data_path = r'C:\Users\MyLaptop\Desktop\개발\2020_News_Bigdata_HACKATHON\doya_web\doyaProject\doyaApp\data'
     major_fold = os.listdir(data_path)                    
     # print(major_fold)
 
@@ -36,9 +36,9 @@ def home(request):
         news_fold = os.listdir(news_dir)
 
         os.chdir(news_dir)
-        # print(news_fold)
+        print(news_fold)
         recently_news_file = glob.glob('2020_*.csv')
-        # print(recently_news_file)
+        print(recently_news_file)
 
         news_data = pd.read_csv(recently_news_file[0], error_bad_lines=False, engine="python", encoding='utf-8')
         print(news_data.columns)
@@ -50,6 +50,7 @@ def home(request):
         print(recently_news_lst)
 
         df_shuffled=sklearn.utils.shuffle(news_data)
+        df_shuffled=sklearn.utils.shuffle(df_shuffled)
         random_news_lst_num1 = df_shuffled.iloc[0]
         random_news_lst = df_shuffled.iloc[1:5]
         
@@ -66,14 +67,15 @@ def home(request):
 
 
     else :
-        
+
 
         context = {
             'news' : True
         }
 
-
     return render(request, 'home.html', context)
+
+
 
 def news_list(request):
 
