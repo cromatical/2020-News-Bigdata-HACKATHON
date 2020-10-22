@@ -28,4 +28,5 @@ urlpatterns = [
     path('scrapbook/', views.scrapbook, name='scrapbook'),
     path('news_list/', views.news_list, name="news_list"),
     path('scrapB1/', views.scrapB1, name="scrapB1"),
+    path('mypaga/', views.scrapB1, name="mypaga"),
 ]

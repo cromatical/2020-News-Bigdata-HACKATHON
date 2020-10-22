@@ -92,3 +92,6 @@ def scrapbook(request):
 
 def scrapB1(request):
     return render(request, 'scrapB1.html')
+
+def mypaga(request):
+    return render(request, 'mypaga.html')
