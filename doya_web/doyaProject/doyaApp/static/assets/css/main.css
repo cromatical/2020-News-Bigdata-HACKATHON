@@ -121,7 +121,9 @@ input, select, textarea {
 	border-radius: 0 !important;
 }
 
-
+.mb-3 > .card {
+	margin-top: 15%;
+}
 
 
 
@@ -2162,18 +2164,18 @@ input, select, textarea {
 	input[type="checkbox"],
 	input[type="radio"] {
 		-moz-appearance: none;
-		-webkit-appearance: none;
+		-webkit-appearance: checkbox;
 		-ms-appearance: none;
-		appearance: none;
+		appearance: checkbox;
 		display: block;
 		float: left;
 		margin-right: -2em;
-		opacity: 0;
+		/* opacity: 0; */
 		width: 1em;
 		z-index: -1;
 	}
 
-		input[type="checkbox"] + label,
+		/* input[type="checkbox"] + label,
 		input[type="radio"] + label {
 			text-decoration: none;
 			color: #646464;
@@ -2184,7 +2186,7 @@ input, select, textarea {
 			padding-left: 2.4em;
 			padding-right: 0.75em;
 			position: relative;
-		}
+		} */
 
 			input[type="checkbox"] + label:before,
 			input[type="radio"] + label:before {
@@ -2253,6 +2255,12 @@ input, select, textarea {
 		color: #aaaaaa !important;
 		opacity: 1.0;
 	}
+
+input[type='checkbox'] {
+	margin-right: 0px !important;
+	margin-top: 7px !important;
+}
+
 
 /* Icon */
 
