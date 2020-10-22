@@ -30,9 +30,10 @@ class Profile(models.Model):
 #     last_user_news_raw_stream = models.TextField(max_length=5000)
     
 
-# class User_scrap(models.Model):
-#     user_info = models.ForeignKey(
-#         User, on_delete=models.CASCADE, related_name='user')
+class User_scrap(models.Model):
+    summary = models.TextField()
+    writer = models.ForeignKey(
+        Profile, on_delete=models.CASCADE, related_name='scrap') 
     
     
 
