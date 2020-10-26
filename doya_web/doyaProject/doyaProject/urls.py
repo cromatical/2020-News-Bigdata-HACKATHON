@@ -24,5 +24,9 @@ urlpatterns = [
     path('logout/', views.logout, name='logout'),
     path('signup/', views.signup, name='signup'),
     path('mypage/', views.mypage, name='mypage'),
+    path('scrapbook/', views.scrapbook, name='scrapbook'),
     path('news_list/', views.news_list, name="news_list"),
+    path('news_list2/', views.news_list2, name="news_list2"),
+    path('scrapB1/', views.scrapB1, name="scrapB1"),
+    path('mypaga/', views.mypaga, name="mypaga"),
 ]
