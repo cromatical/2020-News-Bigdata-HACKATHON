@@ -67,11 +67,11 @@
     
   - **프로토타입** 
     - 시스템아키텍처
-      ![시스템아키텍처](.\2020_News_Bigdata_HACKATHON\img\시스템아키텍처.png)
+      ![.\2020_News_Bigdata_HACKATHON\img\시스템아키텍처.png]
     - SW아키텍처
-      ![SW아키텍처](.\2020_News_Bigdata_HACKATHON\img\SW아키텍처.png)
+      ![.\2020_News_Bigdata_HACKATHON\img\SW아키텍처.png]
     - 웹구현
-      ![웹](.\2020_News_Bigdata_HACKATHON\img\웹.png)
+      ![.\2020_News_Bigdata_HACKATHON\img\웹.png]
       
 ## 💡 기대효과
   - 📃 서비스 전후의 차이점
