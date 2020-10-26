@@ -67,7 +67,7 @@
     
   - **프로토타입** 
     - 시스템아키텍처
-      ![시스템아키텍처](.\2020_News_Bigdata_HACKATHON\img\시스템아키텍처.png)
+      ![시스템아키텍처](https://github.com/cromatical/2020_News_Bigdata_HACKATHON/blob/master/Image/SW%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98.png)
     - SW아키텍처
       ![SW아키텍처](.\2020_News_Bigdata_HACKATHON\img\SW아키텍처.png)
     - 웹구현
