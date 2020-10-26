@@ -68,8 +68,10 @@
   - **프로토타입** 
     - 시스템아키텍처
       ![시스템아키텍처](https://github.com/cromatical/2020_News_Bigdata_HACKATHON/blob/master/Image/%EC%8B%9C%EC%8A%A4%ED%85%9C%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98.png)
+      
     - SW아키텍처
       ![SW아키텍처](https://github.com/cromatical/2020_News_Bigdata_HACKATHON/blob/master/Image/SW%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98.png)
+      
     - 웹구현
       ![웹](https://github.com/cromatical/2020_News_Bigdata_HACKATHON/blob/master/Image/%EC%9B%B9.png)
       
